@@ -1205,3 +1205,8 @@ footer p {
         margin-top: 8px;
     }
 }
+
+/* Hidden */
+.hidden{
+    display: none;
+}
