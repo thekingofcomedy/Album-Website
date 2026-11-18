@@ -363,8 +363,7 @@ function loadListeningHistory() {
 
   //No albums in listening history state
   if (savedAlbums.length === 0) {
-    container.innerHTML =
-      "<p>No albums in your listening history yet. Click '+' on any album card to add it.</p>";
+    container.innerHTML = "<p>No albums in your listening history yet.</p>";
     return;
   }
 
@@ -542,8 +541,7 @@ function renderUserReviews() {
 
   if (userReviews.length === 0) {
     avgScoreEl.textContent = "--";
-    container.innerHTML =
-      "<p>No reviews posted yet. Open any album and click Post to add one.</p>";
+    container.innerHTML = "<p>No reviews posted yet.</p>";
     return;
   }
 

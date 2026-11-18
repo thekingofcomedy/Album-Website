@@ -8,14 +8,14 @@
 
 @font-face {
     font-family: "Liberation-Sans Regular";
-    src: url("../fonts/LiberationSans-Regular.ttf") format("truetype");
+    src: url("../Fonts/LiberationSans-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Liberation-Sans Bold";
-    src: url("../fonts/LiberationSans-Bold.ttf") format("truetype");
+    src: url("../Fonts/LiberationSans-Bold.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
 }
