@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.1/gsap.min.js" defer></script>
+    <script src="../JS/main.js" defer></script>
+    <link rel="stylesheet" href="../CSS/stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./Browse.html">Browse</a></li>
+                <li><a href="./Profile.html" class="active">Profile</a></li>
+            </ul>
+        </nav>
+
+        <form action="./Browse.html">
+            <input type="search" id="search-input" name="search" placeholder="Search">
+        </form>
+    </header>
+
+    <main>
+        <section id="profile-header-section">
+            <div class="user-identity">
+                <div class="avatar-circle"></div>
+                <h2>User Profile</h2>
+            </div>
+
+            <div class="average-rating-box">
+                <span id="dynamic-avg-score" class="avg-score">--</span>
+                <span class="avg-label">Average Rating</span>
+            </div>
+        </section>
+
+        <div class="history-toggle">
+            <button type="button" id="btn-review-history" class="active-tab">Review History</button>
+            <span class="divider">|</span>
+            <button type="button" id="btn-listening-history">Listening History</button>
+        </div>
+        <hr>
+
+        <div id="profile-content-area">
+            <section id="review-history-view">
+                <div class="sort-container">
+                    <button type="button" class="sort-toggle-btn">
+                        <img src="../Icons/Sort by lines.svg" alt="Sort Icon" class="sort-icon">Sort By
+                    </button>
+                    <div class="sort-dropdown sort-dropdown-profile" hidden>
+                        <label><input type="radio" name="review-sort" value="Newest" checked>Newest to Oldest</label>
+                        <label><input type="radio" name="review-sort" value="Oldest">Oldest to Newest</label>
+                        <label><input type="radio" name="review-sort" value="Highest">Highest to Lowest</label>
+                        <label><input type="radio" name="review-sort" value="Lowest">Lowest to Highest</label>
+                    </div>
+                </div>
+
+                <div id="review-list-container" class="review-list"></div>
+            </section>
+
+            <section id="listening-history-review" class="hidden">
+                <div id="listening-grid-container" class="album-grid"></div>
+            </section>
+        </div>
+    </main>
+
+    <template id="review-card-template">
+        <article class="review-card">
+            <div class="review-left-column">
+                <a href="./Album Page.html?id=">
+                    <img src="" alt="Album Cover" class="review-album-cover">
+                </a>
+                <div class="review-album-details">
+                    <h3 class="review-album-title"><a href="./Album Page.html?id="></a></h3>
+                    <p class="review-artist-name"></p>
+                    <div class="score-box">
+                        <span class="user-score"></span>
+                        <span class="rating-label">User Rating</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-right-column">
+                <div>
+                    <p class="review-text"></p>
+                    <button type="button" class="read-more-link">Read More</button>
+                </div>
+            </div>
+        </article>
+    </template>
+
+    <template id="album-card-template">
+        <article class="album-card">
+            <div class="cover-wrapper">
+                <a href="./Album Page.html?id=">
+                    <img src="" alt="Album Cover" class="album-cover">
+                </a>
+                <button type="button" class="add-btn">
+                    <img src="../Icons/Quick Add Plus.svg" alt="Add" class="icon-plus">
+                    <img src="../Icons/Quick Add Tick.svg" alt="Added" class="icon-tick">
+                </button>
+            </div>
+
+            <div class="album-details">
+                <h3 class="album-title"><a href="./Album Page.html"></a></h3>
+                <p class="artist-name"></p>
+
+                <div class="popularity">
+                    <span class="ratings-score"></span>
+                    <span class="popularity-label">Popularity</span>
+                </div>
+            </div>
+        </article>
+    </template>
+
+    <footer>
+        <p>Copyright @ Kiran Ramdass</p>
+    </footer>
+</body>
+</html>

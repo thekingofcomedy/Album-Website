@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.1/gsap.min.js" defer></script>
+    <script src="../JS/main.js" defer></script>
+    <link rel="stylesheet" href="../CSS/stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./Browse.html" class="active">Browse</a></li>
+                <li><a href="./Profile.html">Profile</a></li>
+            </ul>
+        </nav>
+
+        <form action="./Browse.html">
+            <input type="search" id="search-input" name="search" placeholder="Search">
+        </form>
+    </header>
+
+    <main>
+        <section id="browse-section">
+            <h2>Browse Albums</h2>
+            <hr>
+
+            <div class="sort-container">
+                <button type="button" class="sort-toggle-btn">
+                    <img src="../Icons/Sort by lines.svg" alt="Sort Icon" class="sort-icon">Sort By
+                </button>
+
+                <div class="sort-dropdown sort-dropdown-browse" hidden>
+                    <div class="sort-group">
+                        <label><input type="radio" name="sort" value="popularity" checked>Popular</label>
+                        <label><input type="radio" name="sort" value="newest">Newest</label>
+                        <label><input type="radio" name="sort" value="oldest">Oldest</label>
+                    </div>
+                    <div class="sort-group">
+                        <label><input type="radio" name="filter" value="all" checked>All</label>
+                        <label><input type="radio" name="filter" value="heard">Heard</label>
+                        <label><input type="radio" name="filter" value="unheard">Unheard</label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="browse-grid" class="album-grid"></div>
+
+            <div id="no-results-box" class="no-results-state hidden">
+                <img src="../Icons/Search Bar Icon.svg" alt="No Results" class="no-results-icon">
+                <p id="no-results-text" class="no-results-text"></p>
+            </div>
+        </section>
+    </main>
+
+    <template id="album-card-template">
+        <article class="album-card">
+            <div class="cover-wrapper">
+                <a href="./Album Page.html?id=">
+                    <img src="" alt="Album Cover" class="album-cover">
+                </a>
+                <button type="button" class="add-btn">
+                    <img src="../Icons/Quick Add Plus.svg" alt="Add" class="icon-plus">
+                    <img src="../Icons/Quick Add Tick.svg" alt="Added" class="icon-tick">
+                </button>
+            </div>
+
+            <div class="album-details">
+                <h3 class="album-title"></h3>
+                <p class="artist-name"></p>
+
+                <div class="popularity">
+                    <span class="ratings-score"></span>
+                    <span class="popularity-label">Popularity</span>
+                </div>
+            </div>
+        </article>
+    </template>
+
+    <template id="skeleton-card-template">
+        <div class="album-card">
+            <div class="skeleton cover-wrapper"></div>
+            <div class="skeleton skeleton-title"></div>
+            <div class="skeleton skeleton-artist"></div>
+        </div>
+    </template>
+
+    <footer>
+        <p>Copyright @ Kiran Ramdass</p>
+    </footer>
+</body>
+</html>

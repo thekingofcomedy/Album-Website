@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.1/gsap.min.js" defer></script>
+    <script src="../JS/main.js" defer></script>
+    <link rel="stylesheet" href="../CSS/stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./Browse.html">Browse</a></li>
+                <li><a href="./Profile.html">Profile</a></li>
+            </ul>
+        </nav>
+
+        <form action="./Browse.html">
+            <input type="search" id="search-input" name="search" placeholder="Search">
+        </form>
+    </header>
+
+    <main id="album-detail-view">
+        <div class="album-content-layout">
+            <section class="album-left-column">
+                <div class="album-showcase">
+                    <img src="../Icons/Quick Add Plus.svg" alt="Album Cover" class="skeleton">
+
+                    <div class="album-metadata">
+                        <h1 id="detail-title" class="title-large">Album Name</h1>
+                        <p id="detail-artist" class="artist-large">Artist Name</p>
+
+                        <div class="release-info">
+                            <p><strong>Release Date:</strong><span id="detail-date"></span></p>
+                            <p><strong>Genre:</strong><span id="detail-genre"></span></p>
+                        </div>
+
+                        <div class="detail-popularity">
+                            <span id="detail-score" class="score-large">--</span>
+                            <span class="popularity-label-large">Popularity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-compose-box">
+                    <div class="review-box-header">
+                        <div class="rating-stepper">
+                            <div class="rating-arrows">
+                                <button type="button" id="rating-up-btn">▲</button>
+                                <button type="button" id="rating-down-btn">▼</button>
+                            </div>
+                            <input type="text" inputmode="numeric" id="review-rating" maxlength="3" value="0">
+                        </div>
+
+                        <div class="heard-toggle">
+                            <label for="heard-checkbox">Heard This?</label>
+                            <input type="checkbox" id="heard-checkbox">
+                        </div>
+                    </div>
+
+                    <textarea id="review-textarea" placeholder="Write your review here"></textarea>
+
+                    <div class="review-box-footer">
+                        <button type="button" id="post-review-btn">Post</button>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="tracklist-panel">
+                <h2>Tracklist</h2>
+                <hr>
+
+                <ul id="track-list-container"></ul>
+
+                <hr>
+
+                <p class="total-songs">Total Songs: <span id="detail-total-songs"></span></p>
+            </aside>
+        </div>
+    </main>
+
+    <template id="track-item-template">
+        <li class="track-row">
+            <div class="track-info">
+                <span class="track-number"></span>
+                <span class="track-name"></span>
+            </div>
+            <hr>
+        </li>
+    </template>
+
+    <template id="skeleton-track-template">
+        <li class="track-row">
+            <div class="track-info">
+                <div class="skeleton skeleton-track-num"></div>
+                <div class="skeleton skeleton-track-name"></div>
+            </div>
+            <hr>
+        </li>
+    </template>
+
+    <footer>
+        <p>Copyright @ Kiran Ramdass</p>
+    </footer>
+</body>
+</html>

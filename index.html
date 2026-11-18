@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.15.1/gsap.min.js" defer></script>
+    <script src="./JS/main.js" defer></script>
+    <link rel="stylesheet" href="./CSS/stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="./HTML/Browse.html">Browse</a></li>
+                <li><a href="./HTML/Profile.html">Profile</a></li>
+            </ul>
+        </nav>
+
+        <form action="./HTML/Browse.html">
+            <input type="search" id="search-input" name="search" placeholder="Search">
+        </form>
+    </header>
+
+    <main>
+        <section>
+            <h2>Recommended</h2>
+            <hr>
+            <div id="recommended-row" class="album-row"></div>
+        </section>
+
+        <section>
+            <h2>New Music</h2>
+            <hr>
+            <div id="new-music-row" class="album-row"></div>
+        </section>
+
+        <section>
+            <h2>Popular</h2>
+            <hr>
+            <div id="popular-row" class="album-row"></div>
+        </section>
+    </main>
+
+    <template id="album-card-template">
+        <article class="album-card">
+            <div class="cover-wrapper">
+                <a href="./HTML/Album Page.html?id=">
+                    <img src="" alt="Album Cover" class="album-cover">
+                </a>
+                <button type="button" class="add-btn">
+                    <img src="./Icons/Quick Add Plus.svg" alt="Add" class="icon-plus">
+                    <img src="./Icons/Quick Add Tick.svg" alt="Added" class="icon-tick">
+                </button>
+            </div>
+
+            <div class="album-details">
+                <h3 class="album-title"></h3>
+                <p class="artist-name"></p>
+
+                <div class="popularity">
+                    <span class="ratings-score"></span>
+                    <span class="popularity-label">Popularity</span>
+                </div>
+            </div>
+        </article>
+    </template>
+
+    <template id="skeleton-card-template">
+        <div class="album-card">
+            <div class="skeleton cover-wrapper"></div>
+            <div class="skeleton skeleton-title"></div>
+            <div class="skeleton skeleton-artist"></div>
+        </div>
+    </template> 
+
+    <footer>
+        <p>Copyright @ Kiran Ramdass</p>
+    </footer>
+</body>
+</html>
