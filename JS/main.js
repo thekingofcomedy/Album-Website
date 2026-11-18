@@ -664,4 +664,16 @@ document.addEventListener("DOMContentLoaded", () => {
       new URLSearchParams(window.location.search).get("id") || DEFAULT_ALBUM_ID;
     loadAlbumFromITunes(albumId);
   }
+
+  //GSAP Page Load entrance animation
+  if (typeof gsap !== "undefined") {
+    gsap.from("header, main > section:first-child", {
+      y: -15,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.15,
+      ease: "power2.out",
+      clearProps: "transform",
+    });
+  }
 });
