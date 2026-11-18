@@ -1011,14 +1011,54 @@ footer p {
     }
 
     #album-detail-view .album-content-layout {
-        grid-template-columns: 1fr 250px;
+        grid-template-columns: 1fr;
         gap: 24px;
+        padding-top: 20px;
     }
 
-    .album-showcase img,
-    .tracklist-panel {
+    .album-showcase {
+        gap: 20px;
+        margin-bottom: 0;
+    }
+
+    .album-showcase img {
         width: 220px;
-        height: auto;
+        height: 220px;
+    }
+
+    .title-large {
+        font-size: 1.65rem;
+    }
+
+    .artist-large {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    .release-info {
+        gap: 4px;
+        margin-bottom: 12px;
+    }
+
+    .release-info p {
+        font-size: 0.85rem;
+    }
+
+    .score-large {
+        font-size: 3rem;
+    }
+
+    .popularity-label-large {
+        font-size: 1rem;
+    }
+
+    .review-compose-box {
+        margin-top: 24px;
+    }
+
+    .tracklist-panel {
+        width: 100%;
+        contain: none;
     }
 }
 
@@ -1077,33 +1117,91 @@ footer p {
 
     /* Album Detail */
     #album-detail-view .album-content-layout {
-        grid-template-columns: 1fr 150px;
-        gap: 16px 12px;
-    }
-
-    .album-left-column {
-        display: contents;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-top: 10px;
     }
 
     .album-showcase {
         flex-direction: column;
+        gap: 12px;
+        margin-bottom: 0;
     }
 
-    .album-showcase img,
-    .tracklist-panel {
+    .album-showcase img {
         width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    .album-metadata {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        column-gap: 8px;
+        align-items: start;
+    }
+
+    .title-large {
+        grid-column: 1;
+        font-size: 1.35rem;
+    }
+
+    .artist-large {
+        grid-column: 1;
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+
+    .release-info {
+        grid-column: 1 / -1;
+        gap: 4px;
+        margin-bottom: 0;
+    }
+
+    .release-info p {
+        font-size: 0.8rem;
+    }
+
+    .detail-popularity {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        align-items: flex-end;
+        margin-top: 0;
     }
 
     .score-large {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+    }
+
+    .popularity-label-large {
+        font-size: 0.75rem;
+    }
+
+    .review-compose-box {
+        margin-top: 20px;
+    }
+
+    .tracklist-panel {
+        width: 100%;
+        contain: none;
+    }
+
+    .tracklist-panel h2,
+    .total-songs {
+        font-size: 0.85rem;
+    }
+
+    .track-info {
+        font-size: 0.75rem;
+        gap: 6px;
+    }
+
+    .track-number {
+        min-width: 18px;
     }
 
     .review-compose-box {
         grid-column: 1 / -1;
+        margin-top: 8px;
     }
-}
-
-/* Hidden */
-.hidden {
-    display: none;
 }
