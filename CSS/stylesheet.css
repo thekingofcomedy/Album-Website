@@ -1092,22 +1092,49 @@ footer p {
     }
 
     /* Profile */
+    #profile-header-section {
+        gap: 12px;
+    }
+
+    .user-identity {
+        gap: 12px;
+    }
+
     .avatar-circle {
-        width: 64px;
-        height: 64px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .user-identity h2 {
+        font-size: 1.25rem;
     }
 
     .average-rating-box {
-        width: 90px;
-        height: 90px;
+        width: 78px;
+        height: 78px;
+        border-radius: 12px;
     }
 
     .avg-score {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        margin-bottom: 2px;
+    }
+
+    .avg-label {
+        font-size: 0.65rem;
+    }
+
+    .history-toggle button {
+        font-size: 1rem;
+    }
+
+    .review-card {
+        gap: 14px;
     }
 
     .review-left-column {
         width: 155px;
+        gap: 10px;
     }
 
     .review-album-cover {
@@ -1115,6 +1142,29 @@ footer p {
         height: 72px;
     }
 
+    .review-album-details {
+        height: 72px;
+    }
+
+    .review-album-title {
+        font-size: 0.9rem;
+    }
+
+    .review-artist-name {
+        font-size: 0.72rem;
+    }
+
+    .user-score {
+        font-size: 1.5rem;
+    }
+
+    .rating-label {
+        font-size: 0.65rem;
+    }
+
+    .review-right-column {
+        padding-left: 14px;
+    }
     /* Album Detail */
     #album-detail-view .album-content-layout {
         grid-template-columns: 1fr;
